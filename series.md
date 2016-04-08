@@ -1,9 +1,8 @@
 ---
 layout: postlayout
 tagline:
-title: 系列文章
+title: 系列文章--[转载]P_Chou
 ---
-
 ## GitHub建站攻略
 
 > [一步步在GitHub上创建博客主页(1)]({% post_url 2013-01-03-build-github-blog-page-01 %})
