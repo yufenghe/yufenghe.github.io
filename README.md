@@ -1,3 +1,11 @@
-P_Chou的个人博客，如果您想clone本博客，请在fork后删除或者修改`CNAME`文件
+说明
+----------
+---
+2016-04-08更新_config.yml
+此博客clone自`P_Chou`，在此感谢。
 
-Please delete the `CNAME` or change it after your fork
+余枫
+----------
+---
+我是于凤贺，博客：yufenghe.github.io
+我是一名程序猿，快乐的工作，愉快的生活，享受每一时刻的自己。
