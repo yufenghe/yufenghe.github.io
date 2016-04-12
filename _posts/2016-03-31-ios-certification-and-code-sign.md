@@ -1,6 +1,6 @@
 ---
 layout: postlayout
-title: 漫谈iOS程序的证书和签名机制
+title: 漫谈iOS程序的证书和签名机制-【转载】P_Chou
 categories: [IOS]
 tags: [ios]
 ---

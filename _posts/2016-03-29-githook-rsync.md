@@ -1,6 +1,6 @@
 ---
 layout: postlayout
-title: githook+rsync简单实现web部署
+title: githook+rsync简单实现web部署-【转载】P_Chou
 categories: [open-source]
 tags: [Git,Gitolite,Hook,rsync]
 ---

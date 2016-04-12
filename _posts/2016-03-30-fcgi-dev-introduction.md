@@ -1,6 +1,6 @@
 ---
 layout: postlayout
-title: FastCGI+lighttpd开发之介绍和环境搭建
+title: FastCGI+lighttpd开发之介绍和环境搭建-【转载】P_Chou
 categories: [linux]
 tags: [FastCGI,lighttpd]
 ---

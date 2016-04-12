@@ -7,7 +7,6 @@ categories: [Linux]
 tags: [Linux]
 ---
 
-本文为原创，首发于我的cnblog[linux权限模型简介]((http://www.cnblogs.com/P_Chou/archive/2012/12/02/linux-perm-basic.html))
 
 ## linux的基础权限体系是基于UGO的 ##
 

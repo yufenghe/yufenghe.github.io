@@ -1,6 +1,6 @@
 ---
 layout: postlayout
-title: 《构建高性能web站点》笔记--应用程序篇
+title: 《构建高性能web站点》笔记--应用程序篇-[转载]P_Chou
 thumbimg: 63d9f2d3572c11dfe4b45162632762d0f703c20e.jpg
 categories: [Web]
 tags: [Performance, Web dev]
