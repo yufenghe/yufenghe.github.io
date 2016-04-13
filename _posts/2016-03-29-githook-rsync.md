@@ -1,6 +1,6 @@
 ---
 layout: postlayout
-title: githook+rsync简单实现web部署-【转载】P_Chou
+title: githook+rsync简单实现web部署
 categories: [open-source]
 tags: [Git,Gitolite,Hook,rsync]
 ---
@@ -9,7 +9,7 @@ tags: [Git,Gitolite,Hook,rsync]
 
 ## Git Hook
 
-之前使用Git hook实现过jekyll的转化和发布，在[Gitolite实现hook，Jekyll自动构建发布]({% post_url 2014-04-03-git-gitolite-hook %})里面有记录，这里就不多谈了。
+之前使用Git hook实现过jekyll的转化和发布，在[Gitolite实现hook，Jekyll自动构建发布]。
 
 总之，使用git的服务端hook技巧可以实现一些简单的push触发自定义动作的功能。
 
@@ -200,7 +200,6 @@ rsync -av ./ rsync@192.168.1.102::www --chown=www:www --password-file=/home/git/
 
 [Rsync安全配置](http://drops.wooyun.org/papers/161)
 
-[Gitolite实现hook，Jekyll自动构建发布]({% post_url 2014-04-03-git-gitolite-hook %})
 
 
 

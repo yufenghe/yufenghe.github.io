@@ -1,6 +1,6 @@
 ---
 layout: postlayout
-title: 服务器端文件分片合并的思考和实践-【转载】P_Chou
+title: 服务器端文件分片合并的思考和实践
 categories: [Web]
 tags: [nginx,storage,FileSystem]
 ---

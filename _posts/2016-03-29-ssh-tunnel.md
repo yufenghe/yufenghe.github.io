@@ -1,6 +1,6 @@
 ---
 layout: postlayout
-title: SSH隧道翻墙的原理和实现-【转载】P_Chou
+title: SSH隧道翻墙的原理和实现
 categories: [linux]
 tags: [ssh]
 ---
