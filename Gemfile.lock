@@ -117,7 +117,7 @@ GEM
       parslet (~> 1.5.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    yajl-ruby (1.1.0-x86-mingw32)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   x86-mingw32
