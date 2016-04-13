@@ -12,13 +12,16 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: "yufenghe Tech Space"
+      title: "P_Chou Tech Space"
 
-description: "yufenghe Tech Space, share technology post"
+description: "P_Chou Tech Space, share technology post"
 author:
-  name: yufenghe
-  email: yufenghe87@sina.com
-  github: yufenghe
+  name: P_Chou
+  email: dbyll@ismaildemirbilek.com
+  github: dbtek
+  twitter: dbtek
+  pinterest: asd123
+  linkedin: asd123
   bio: Do not build on quicksand high
   email_md5: 726351295ec82e145928582f595aa3aa
 
@@ -27,5 +30,3 @@ categories_path: category.html
 tags_path: tag.html
 
 BASE_PATH:
-
-exclude: ["vendor"]
