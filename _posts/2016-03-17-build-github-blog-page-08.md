@@ -52,11 +52,11 @@ tags: [github-page, jekyll]
 
 ## 本地环境搭建 ##
 
-这一步不是必须的，但是强烈建议完成。因为在博客发布之前，通常都是需要在本地先检验一下的。笔者曾经在[一步步在GitHub上创建博客主页(4)]({% post_url 2013-01-05-build-github-blog-page-04 %})中详细描述了如何构建一个本地环境。不过现在情况变的更简单了，github有一个对应的gem，可以"一键"配置环境，具体可以参考[Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages)。这里稍微提一下：
+这一步不是必须的，但是强烈建议完成。因为在博客发布之前，通常都是需要在本地先检验一下的。笔者曾经在[一步步在GitHub上创建博客主页(4)]({% post_url 2016-03-13-build-github-blog-page-04 %})中详细描述了如何构建一个本地环境。不过现在情况变的更简单了，github有一个对应的gem，可以"一键"配置环境，具体可以参考[Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages)。这里稍微提一下：
 
 ### Ruby安装 ###
 
-参考[一步步在GitHub上创建博客主页(4)]({% post_url 2013-01-05-build-github-blog-page-04 %})
+参考[一步步在GitHub上创建博客主页(4)]({% post_url 2016-03-13-build-github-blog-page-04 %})
 
 ### 安装Bundle
 
@@ -211,7 +211,7 @@ paginate_path: "page:num" # 指定每页的url
 
 ### 多种Markdown解释器的选择
 
-[Markdown解释器很多]({% post_url 2014-07-07-something-about-markdown %})，各自有各自的扩展和特点，你可以自由选择了，只需要在`_config.yml`中指定就行了：
+[Markdown解释器很多]({% post_url 2016-03-21-something-about-markdown %})，各自有各自的扩展和特点，你可以自由选择了，只需要在`_config.yml`中指定就行了：
 
 {% highlight yaml %}
 markdown:      kramdown #默认使用kramdown
@@ -220,18 +220,18 @@ markdown:      kramdown #默认使用kramdown
 
 相关文章
 
-> [一步步在GitHub上创建博客主页(1)]({% post_url 2013-01-03-build-github-blog-page-01 %})
+> [一步步在GitHub上创建博客主页(1)]({% post_url 2016-03-10-build-github-blog-page-01 %})
 >
-> [一步步在GitHub上创建博客主页(2)]({% post_url 2013-01-05-build-github-blog-page-02 %})
+> [一步步在GitHub上创建博客主页(2)]({% post_url 2016-03-11-build-github-blog-page-02 %})
 >
-> [一步步在GitHub上创建博客主页(3)]({% post_url 2013-01-05-build-github-blog-page-03 %})
+> [一步步在GitHub上创建博客主页(3)]({% post_url 2016-03-12-build-github-blog-page-03 %})
 >
-> [一步步在GitHub上创建博客主页(4)]({% post_url 2013-01-05-build-github-blog-page-04 %})
+> [一步步在GitHub上创建博客主页(4)]({% post_url 2016-03-13-build-github-blog-page-04 %})
 >
-> [一步步在GitHub上创建博客主页(5)]({% post_url 2013-01-07-build-github-blog-page-05 %})
+> [一步步在GitHub上创建博客主页(5)]({% post_url 2016-03-14-build-github-blog-page-05 %})
 > 
-> [一步步在GitHub上创建博客主页(6)]({% post_url 2013-01-09-build-github-blog-page-06 %})
+> [一步步在GitHub上创建博客主页(6)]({% post_url 2016-03-15-build-github-blog-page-06 %})
 > 
-> [一步步在GitHub上创建博客主页(7)]({% post_url 2013-01-20-build-github-blog-page-07 %})
+> [一步步在GitHub上创建博客主页(7)]({% post_url 2016-03-16-build-github-blog-page-07 %})
 >
 > 一步步在GitHub上创建博客主页-最新版

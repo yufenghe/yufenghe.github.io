@@ -95,10 +95,10 @@ web 服务器还具有缓存文件描述符（类似句柄）的能力，这样�
 
 本文从应用程序层面总结了构建高性能web站点的要点，主要探讨了缓存的实现技术。
 
-劳动果实，转载请注明出处：[《构建高性能web站点》笔记--应用程序篇]({% post_url 2013-01-21-high-performance-web-site-program %})
+劳动果实，转载请注明出处：[《构建高性能web站点》笔记--应用程序篇]({% post_url 2016-03-03-high-performance-web-site-program %})
 
 相关文章
 
-> [《构建高性能web站点》笔记--基础架构篇]({% post_url 2013-01-21-high-performance-web-site-infrastructure %})
+> [《构建高性能web站点》笔记--基础架构篇]({% post_url 2016-03-04-high-performance-web-site-infrastructure %})
 >
 > 《构建高性能web站点》笔记--应用程序篇

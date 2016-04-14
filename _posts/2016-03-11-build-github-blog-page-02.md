@@ -42,7 +42,7 @@ tags: [github-page, jekyll, liquid]
 
 这里省略了windows下安装和使用Git客户端的基本技巧，您应该已经掌握此技能了。虽然，您仍然可以按照本教程的指引完成一个简单的网站，但是后期的维护工作无论如何都不能少了这项技能。
 
-下面的步骤假设您已经安装好了Git客户端，安装和使用技巧请参见：[Git学习资源]({% post_url 2013-01-03-git-resource %})
+下面的步骤假设您已经安装好了Git客户端，安装和使用技巧请参见：[Git学习资源]({% post_url 2016-03-09-git-resource %})
 
  
 ### 本地编辑及上传 ###
@@ -130,18 +130,18 @@ $ git push origin gh-pages
 
 相关文章
 
-> [一步步在GitHub上创建博客主页(1)]({% post_url 2013-01-03-build-github-blog-page-01 %})
+> [一步步在GitHub上创建博客主页(1)]({% post_url 2016-03-10-build-github-blog-page-01 %})
 >
 > 一步步在GitHub上创建博客主页(2)
 > 
-> [一步步在GitHub上创建博客主页(3)]({% post_url 2013-01-05-build-github-blog-page-03 %})
+> [一步步在GitHub上创建博客主页(3)]({% post_url 2016-03-12-build-github-blog-page-03 %})
 >
-> [一步步在GitHub上创建博客主页(4)]({% post_url 2013-01-05-build-github-blog-page-04 %})
+> [一步步在GitHub上创建博客主页(4)]({% post_url 2016-03-13-build-github-blog-page-04 %})
 >
-> [一步步在GitHub上创建博客主页(5)]({% post_url 2013-01-07-build-github-blog-page-05 %})
+> [一步步在GitHub上创建博客主页(5)]({% post_url 2016-03-14-build-github-blog-page-05 %})
 > 
-> [一步步在GitHub上创建博客主页(6)]({% post_url 2013-01-09-build-github-blog-page-06 %})
+> [一步步在GitHub上创建博客主页(6)]({% post_url 2016-03-15-build-github-blog-page-06 %})
 > 
-> [一步步在GitHub上创建博客主页(7)]({% post_url 2013-01-20-build-github-blog-page-07 %})
+> [一步步在GitHub上创建博客主页(7)]({% post_url 2016-03-16-build-github-blog-page-07 %})
 > 
-> [一步步在GitHub上创建博客主页-最新版]({% post_url 2014-07-04-build-github-blog-page-08 %})
+> [一步步在GitHub上创建博客主页-最新版]({% post_url 2016-03-17-build-github-blog-page-08 %})
