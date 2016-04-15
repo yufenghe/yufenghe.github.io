@@ -182,3 +182,20 @@ article img { max-width: 100%; }
   top: 5px;
   left: 5px;
 }
+
+.post-meta-span {
+	padding-top: 2em;
+	text-shadow: 1px 1px 0 #fff;
+	font-size: .9em;
+	font-weight: bold;
+	margin-left: .2em;
+	margin-right: .2em;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
