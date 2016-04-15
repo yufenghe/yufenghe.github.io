@@ -7,7 +7,6 @@
 	<div class="col-sm-12">
 	<div class="post-meta">
 	<i class="fa fa-clock-o"></i>
-	<span class="post-meta-span">
   	<small>
 	   {% assign d = page.date | date: "%d" | plus:'0' %}
 	   {{ page.date | date: "%B" }} 
@@ -19,7 +18,6 @@
 	   {% endcase %}
 	   {{ page.date | date: "%Y" }}
 	 </small>
-	 </span>
 	 <!--
 	 {% if page.tags.size > 0 %}
     <i class="fa fa-tag"></i><span class="post-meta-span">{{ page.tags | join: ', ' }}</span>
