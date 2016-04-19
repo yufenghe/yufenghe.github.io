@@ -1,8 +1,8 @@
 ---
 layout: postlayout
 title: Nginx源码：利用C语言tricky构建函数链
-categories: [c-cpp]
-tags: [nginx,web-server,compiler,CPP]
+categories: [nginx]
+tags: [nginx,web-server,compiler]
 ---
 
 最近开始使用Nginx的第三方扩展解决实际的问题，对Nginx的扩展开发产生了一些兴趣，在阅读第三方代码时产生了一些心得和体会。本文详细分析了进行Nginx过滤器开发的时候，Nginx提供的注册过滤器的精妙机制。参考[Nginx开发从入门到精通-过滤模块](http://tengine.taobao.org/book/chapter_04.html)
