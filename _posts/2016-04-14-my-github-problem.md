@@ -95,3 +95,20 @@ tags: [github-page, jekyll, liquid]
     language: ruby
     script: "bundle exec jekyll build"
 
+
+![enter description here][1]
+
+
+  ![enter description here][2]
+
+
+  ![enter description here][3]
+
+
+  ![enter description here][4]
+
+
+  [1]: ./images/2016-04-14-my-github-problem-img0.png "2016-04-14-my-github-problem-img0.png"
+  [2]: ./images/2016-04-14-my-github-problem-img1.png "2016-04-14-my-github-problem-img1.png"
+  [3]: ./images/2016-04-14-my-github-problem-img2.png "2016-04-14-my-github-problem-img2.png"
+  [4]: ./images/2016-04-14-my-github-problem-img3.png "2016-04-14-my-github-problem-img3.png"
