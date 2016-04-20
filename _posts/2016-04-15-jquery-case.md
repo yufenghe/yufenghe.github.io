@@ -13,10 +13,10 @@ JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的j
 
 在进行CSS设计时，IE浏览器对开发者及设计师而言无疑是个麻烦。尽管IE6的黑暗时代已经过去，IE浏览器家族的人气亦在不断下滑，但我们仍然有必要对其进行检测。当然，以下片段亦可用于检测其它浏览器。
 
-    $(document).ready(function() { 
-          if (navigator.userAgent.match(/msie/i) ){ 
-            alert('I am an old fashioned Internet Explorer'); 
-          } 
+     $(document).ready(function() { 
+    	  if (navigator.userAgent.match(/msie/i) ){ 
+    		alert('I am an old fashioned Internet Explorer'); 
+    	  } 
     }); 
 
 ## 平滑滚动至页面顶部

@@ -23,12 +23,12 @@ GEM
     ffi (1.9.10-x64-mingw32)
     ffi (1.9.10-x86-mingw32)
     gemoji (2.1.0)
-    github-pages (69)
+    github-pages (72)
       RedCloth (= 4.2.9)
       github-pages-health-check (= 1.1.0)
       jekyll (= 3.0.3)
       jekyll-coffeescript (= 1.0.1)
-      jekyll-feed (= 0.4.0)
+      jekyll-feed (= 0.5.1)
       jekyll-gist (= 1.4.0)
       jekyll-github-metadata (= 1.11.0)
       jekyll-mentions (= 1.1.2)
@@ -69,7 +69,7 @@ GEM
       coffee-script (~> 2.2)
     jekyll-compose (0.4.1)
       jekyll (>= 2.5.0)
-    jekyll-feed (0.4.0)
+    jekyll-feed (0.5.1)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
     jekyll-github-metadata (1.11.0)
@@ -110,11 +110,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
-    posix-spawn (0.3.11)
     public_suffix (1.5.3)
-    pygments.rb (0.6.3)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
     rake (10.1.1)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
@@ -134,7 +130,6 @@ GEM
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     wdm (0.1.1)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   x64-mingw32
@@ -145,7 +140,6 @@ DEPENDENCIES
   jekyll (~> 3.0.3)
   jekyll-compose
   jekyll-paginate
-  pygments.rb
   rake (~> 10.1.1)
   rouge (~> 1.10, >= 1.10.1)
   wdm (>= 0.1.0)

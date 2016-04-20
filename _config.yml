@@ -1,17 +1,19 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
-
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num" #pagination generated sub path format
-#pygments: true #for support {% highlight %}
 highlighter: rouge
-markdown: kramdown #use kramdown to parse markdown
+markdown: kramdown
 kramdown:
+  input: GFM
+  extensions:
+    - autolink
+    - footnotes
+    - smart
   syntax_highlighter: rouge
-encoding: utf-8
 redcarpet:
   extensions: [fenced_code_blocks]
   render_options:
-
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num" #pagination generated sub path format
+encoding: utf-8
 defaults:
   -
     scope:
