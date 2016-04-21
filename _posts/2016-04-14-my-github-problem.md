@@ -67,17 +67,105 @@ tags: [github-page, jekyll, liquid]
 ```ruby
     jekyll build --incremental --profile --trace
 ```
-## 高亮插件问题
-之前使用的高亮插件为`pygments`，但由于GitHub官方引用的jekyll为>=3.0的关系，博客构建后，会发来警告，建议使用`rouge`：
 
-```bash
-    $ gem install rouge
-```
-修改_config.yml文件：
+## 高亮插件问题
+
+Github升级Jekyll到3.0… GitHub Pages now faster and simpler with Jekyll 3.0. 修改后发布到Github从提交修改到生成页面, 比以前要快了. 这是好事.。
+这次升级最大的两个变化是：
+>强制只能使用kramdown做markdown解释。
+>强制只能使用rouge做语法解释(原来是pygments)。
+
+另外还不再支持relative_permalinks和Textile了.
+之前使用的高亮插件为`pygments`，虽然构建成功，但是Github会发送警告。
+报警邮件如下：
 
 ```ruby
-    highlighter: rogue
+The page build completed successfully, but returned the following warning:
+ 
+You are attempting to use the 'pygments' highlighter, which is currently unsupported on GitHub Pages. Your site will use 'rouge' for highlighting instead. To suppress this warning, change the 'highlighter' value to 'rouge' in your '_config.yml'. For more information, see https://help.github.com/articles/page-build-failed-config-file-error/#fixing-highlighting-errors.
+ 
+GitHub Pages was recently upgraded to Jekyll 3.0. It may help to confirm you're using the correct dependencies:
+ 
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+ 
+For information on troubleshooting Jekyll see:
+ 
+https://help.github.com/articles/troubleshooting-jekyll-builds
+ 
+If you have any questions you can contact us by replying to this email.
 ```
+安装kramdown和rouge：
+
+```bash
+    $ gem install kramdown rouge
+```
+
+修改*_config.yml*文件：
+
+```ruby
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+  syntax_highlighter: rouge
+```
+配置rouge后，需要引入一个css文件，可以使用
+
+```ruby
+$ rougify help style
+
+usage: rougify style [<theme-name>] [<options>]
+
+Print CSS styles for the given theme.  Extra options are
+passed to the theme.  Theme defaults to thankful_eyes.
+
+options:
+  --scope       (default: .highlight) a css selector to scope by
+
+available themes:
+  base16, base16.dark, base16.monokai, base16.monokai.light, base16.solarized, base16.solarized.dark, colorful, github, molokai, monokai, monokai.sublime, thankful_eyes
+```
+查看目前可用的高亮主题，例如 monokai.sublime 主题，使用
+
+```ruby
+rougify style monokai.sublime > rouge_monkai.css 
+```
+把这个css拷贝到自己的css处就好了
+>所有Rouge的支持语法称呼参考这里: Rouge: [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers)
+
+这样的方式还是比较直观的，但是可能会存在一个坑，先看看 Rouge 对 Backtick 代码块生成的 html 代码
+
+```html
+<div class="highlighter-rouge">
+    <pre class="highlight">
+        <code>
+            ...
+        </code>
+    </pre>
+</div>
+```
+可见 Rouge 应用了一个 highlighter-rouge 类的 <div></div> 以及 highlight 类的 <pre></pre>，再看看 rougify 之前生成的 CSS 文件的头部
+
+```css
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+```
+并没有对 highlighter-rouge 类的 <div></div> 或是 highlight 类的 <pre></pre> 进行样式说明，这直接可能导致代码块的 background-color 属性被覆盖（如 Bootstrap），若是恰好被覆盖为浅色背景，对于 monokai 这样的前景色为浅色的高亮主题，可能会导致代码块看不清楚，坑爹啊！要修复这个问题，需要对之前生成的 css 做一点小改动，加入一行
+
+```css
+pre[class='highlight'] {background-color:#000000;}
+```
+这样来设置 highlight 类的 <pre></pre> 标签的背景为黑色。
+
+>可以参考这个站[https://github.com/richleland/pygments-css](https://github.com/richleland/pygments-css)提供了很多样式，只需把*codehilite*替换成*highlight*即可
+
 ## 本地测试问题
 之前因为gem源问题，导致本地无法使用jekyll构建，就使用了比较麻烦的方法，每次都发布到GitHub上去，通过查看结果来看是否构建成功，结果是悲剧的，收到了好多失败的邮件，下面是其中一封：
 
@@ -105,15 +193,8 @@ tags: [github-page, jekyll, liquid]
     language: ruby
     script: "bundle exec jekyll build"
 ```
-
+>travis-ci使用如下：
 
 ![1]({{ site.BASE_PATH }}/assets/img/2016-04-14-my-github-problem-img0.png)
 
-
-![2]({{ site.BASE_PATH }}/assets/img/2016-04-14-my-github-problem-img1.png)
-
-
-![3]({{ site.BASE_PATH }}/assets/img/2016-04-14-my-github-problem-img2.png)
-
-
-![4]({{ site.BASE_PATH }}/assets/img/2016-04-14-my-github-problem-img3.png)
+![2]({{ site.BASE_PATH }}/assets/img/2016-04-14-my-github-problem-img3.png)
