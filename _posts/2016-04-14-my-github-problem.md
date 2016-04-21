@@ -165,6 +165,9 @@ pre[class='highlight'] {background-color:#000000;}
 这样来设置 highlight 类的 <pre></pre> 标签的背景为黑色。
 
 >可以参考这个站[https://github.com/richleland/pygments-css](https://github.com/richleland/pygments-css)提供了很多样式，只需把*codehilite*替换成*highlight*即可
+>参考[http://platinhom.github.io/2016/02/04/update-github-rouge/](http://platinhom.github.io/2016/02/04/update-github-rouge/)
+>参考[http://blog.javachen.com/2015/06/30/jekyll-kramdown-config.html](http://blog.javachen.com/2015/06/30/jekyll-kramdown-config.html)
+>参考[https://oncemore2020.github.io/blog/upgrade-jekyll/](https://oncemore2020.github.io/blog/upgrade-jekyll/)
 
 ## 本地测试问题
 之前因为gem源问题，导致本地无法使用jekyll构建，就使用了比较麻烦的方法，每次都发布到GitHub上去，通过查看结果来看是否构建成功，结果是悲剧的，收到了好多失败的邮件，下面是其中一封：
