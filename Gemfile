@@ -6,3 +6,4 @@ gem 'rouge', '~> 1.10', '>= 1.10.1'
 gem "rake", "~> 10.1.1"
 gem "jekyll-paginate"
 gem 'wdm', '>= 0.1.0'
+gem 'middleman-syntax'
