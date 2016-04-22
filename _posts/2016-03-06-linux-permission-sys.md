@@ -3,8 +3,8 @@ layout: postlayout
 title: linux权限模型简介
 description: 本文介绍linux的UGO权限模型
 thumbimg: linuxslide.jpg
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 
 
