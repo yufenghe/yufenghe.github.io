@@ -39,3 +39,8 @@ BASE_PATH:
 
 exclude: ["vendor"]
 gems: [jekyll-paginate]
+
+#baidu tongji
+baiduTongji:
+  config: true
+  id: 2159bae77d9d127b9e0caa04258dcfb2
