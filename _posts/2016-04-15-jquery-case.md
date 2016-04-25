@@ -8,6 +8,7 @@ tags: [JQuery,javascript]
 ---
 
 JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。jQuery能够使用户的html页面保持代码和html内容分离，也就是说，不用再在html里面插入一堆js来调用命令了，只需要定义id即可。以下十项jQuery示例可以帮助大家的Web设计项目顺利实现效率提升。
+
 ## 检测IE浏览器　
 
 ```javascript
@@ -17,7 +18,9 @@ $(document).ready(function() {
   } 
 });
 ```
+
 ## 平滑滚动至页面顶部
+
 来源:` Stack Overflow`
 以下是jQuery最为常见的一种实现效果：点击一条链接以平滑滚动至页面顶部。虽然没什么新鲜感可言，但每位开发者几乎都用得上。
 
@@ -27,6 +30,7 @@ $("a[href='#top']").click(function() {
   return false; 
 }); 
 ```
+
 ## 保持始终处于顶部
 
 来源: `Stalk Overflow`
@@ -52,6 +56,7 @@ $(function(){
 	}
 }
 ```
+
 ## 替换html标签
 
 来源: `DesignBump`
@@ -62,6 +67,7 @@ $('li').replaceWith(function(){
   return $("<div />").append($(this).contents()); 
 });
 ```
+
 ## 检测屏幕宽度
 
 来源: `Allure Web Solutions`
@@ -75,6 +81,7 @@ if (responsive_viewport < 481) {
 } 
 /* end smallest screen */ 
 ```
+
 ## 自动修复损坏图片
 
 来源:` jQuery Rain`
@@ -85,6 +92,7 @@ $('img').error(function(){
   $(this).attr('src', 'img/broken.png'); 
 });
 ```
+
 ## 检测复制、粘贴与剪切操作
 
 来源: `WebDesignerDepot`
@@ -101,6 +109,7 @@ $("#textA").bind('cut', function() {
 	$('span').text('cut behaviour detected!') 
 });
 ```
+
 ## 自动为外部链接添加target=“blank”属性　
 
 来源: `Snipplr`
@@ -112,6 +121,7 @@ $('a').not(':contains(root)').click(function(){
 	this.target = "_blank"; 
 });
 ```
+
 ## 悬停时淡入/淡出
 
 来源: `jQuery Rain`
@@ -127,6 +137,7 @@ $(document).ready(function(){
 	}); 
 });
 ```
+
 ## 禁用文本/密码输入中的空格
 
 来源: `Snipplr`
