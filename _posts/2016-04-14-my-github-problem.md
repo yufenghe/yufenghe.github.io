@@ -1,7 +1,7 @@
 ---
 layout: postlayout
 title: Github使用jekyll建站过程踩过的坑
-description: 使用jekyll模板引擎创建Github博客中遇到的问题
+description: 使用jekyll模板引擎创建Github博客中遇到的问题，有可能之前使用好好的，突然出来警告提示，面对种种，且平心静气解决
 thumbimg: 1346208288725.jpg
 categories: [web-build]
 tags: [github-page, jekyll, liquid]
@@ -201,3 +201,41 @@ pre[class='highlight'] {background-color:#000000;}
 ![1]({{ site.BASE_PATH }}/assets/img/2016-04-14-my-github-problem-img0.png)
 
 ![2]({{ site.BASE_PATH }}/assets/img/2016-04-14-my-github-problem-img3.png)
+
+## 新增
+
+### Jekyll：解决Auto-regeneration can no longer be set from your configuration file(s)
+
+运行 **jekyll serve** 在本地运行jekyll网站的时候出现该问题：
+
+```ruby
+Deprecation: Auto-regeneration can no longer be set from your configuration file(s). Use the –[no-]watch/-w command-line option instead.
+```
+解决方法：
+>删除_config.yml文件中的 auto: true 语句
+
+使用过程中可以使用如下命令删除没有依赖的gem
+
+```ruby
+gem cleanup
+```
+有可能本地在使用过程中安装了多个`jekyll`，可以使用`gem uninstall jekyll`去除多余的版本
+
+```ruby
+gem uninstall jekyll
+   Select gem to uninstall:
+     1. jekyll-3.0.3
+     2. jekyll-3.1.2
+     3. All versions
+    > 2
+    Successfully uninstalled jekyll-3.1.2
+```
+
+### 端口占用
+
+可在`_config.yml`中设置端口号
+
+```ruby
+port: 5000
+```
+
