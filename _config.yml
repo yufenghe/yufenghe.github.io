@@ -1,7 +1,7 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 highlighter: rouge
 markdown: kramdown
-
+permalink: pretty
 
 kramdown:
   input: GFM
@@ -10,12 +10,16 @@ kramdown:
     - footnotes
     - smart
   syntax_highlighter: rouge
+
 redcarpet:
   extensions: [fenced_code_blocks]
   render_options:
+
 paginate: 10 # pagination based on number of posts
 paginate_path: "page:num" #pagination generated sub path format
 encoding: utf-8
+port: 5000
+
 defaults:
   -
     scope:
@@ -24,6 +28,7 @@ defaults:
       title: "yufenghe Tech Space"
 
 description: "yufenghe Tech Space, share technology post"
+
 author:
   name: yufenghe
   email: yufenghe87@sina.com
@@ -38,10 +43,10 @@ tags_path: tag.html
 BASE_PATH:
 
 exclude: ["vendor"]
-gems: [jekyll-paginate]
 
 #baidu tongji
 baiduTongji:
   config: true
   id: 2159bae77d9d127b9e0caa04258dcfb2
-port: 5000
+
+gems: [jekyll-paginate]
