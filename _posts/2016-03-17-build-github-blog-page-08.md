@@ -10,7 +10,7 @@ tags: [github-page, jekyll]
 
 > The page build completed successfully, but returned the following warning:
 > 
-> GitHub Pages recently underwent some improvements ([https://github.com/blog/1715-faster-more-awesome-github-pages](https://github.com/blog/1715-faster-more-awesome-github-pages)) to make your site faster and more awesome, but we've noticed that pchou.info isn't properly configured to take advantage of these new features. While your site will continue to work just fine, updating your domain's configuration offers some additional speed and performance benefits. Instructions on updating your site's IP address can be found at [https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#step-2-configure-dns-records](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#step-2-configure-dns-records), and of course, you can always get in touch with a human at support@github.com. For the more technical minded folks who want to skip the help docs: your site's DNS records are pointed to a deprecated IP address. 
+> GitHub Pages recently underwent some improvements ([https://github.com/blog/1715-faster-more-awesome-github-pages](https://github.com/blog/1715-faster-more-awesome-github-pages)) to make your site faster and more awesome, but we've noticed that yufenghe.github.io isn't properly configured to take advantage of these new features. While your site will continue to work just fine, updating your domain's configuration offers some additional speed and performance benefits. Instructions on updating your site's IP address can be found at [https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#step-2-configure-dns-records](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#step-2-configure-dns-records), and of course, you can always get in touch with a human at support@github.com. For the more technical minded folks who want to skip the help docs: your site's DNS records are pointed to a deprecated IP address. 
 > 
 > For information on troubleshooting Jekyll see:
 > 
@@ -120,15 +120,15 @@ $ git clone https://github.com/vinitkumar/white-paper.git
 2. 如果域名提供商支持`ALIAS`或`ANAME`，将域名指向`username.github.io`，这样可以在域名解析的时候得到一个动态的IP，这个IP是一台离你最近的镜像主机
 3. CNMAE：如果你希望使用二级域名访问，将一个二级域名配置成CNAME，指向`username.github.io`，这样可以在域名解析的时候得到一个动态的IP，这个IP是一台离你最近的镜像主机
 
-其中2、3两种方式能够享受CDN加速，因为域名不是直接与IP地址映射的，github就有机会帮用户选择最近的镜像主机提供服务。但是笔者先前是直接将在A记录里面将主域`pchou.info`和`www.pchou.info`指向了`204.232.175.78`。这也是为什么github会给我警告的原因。但是改进有些令人发愁，因为希望保留别人对我的外链啊，那么如何改进呢？
+其中2、3两种方式能够享受CDN加速，因为域名不是直接与IP地址映射的，github就有机会帮用户选择最近的镜像主机提供服务。但是笔者先前是直接将在A记录里面将主域`yufenghe.github.io`和`yufenghe.github.io`指向了`204.232.175.78`。这也是为什么github会给我警告的原因。但是改进有些令人发愁，因为希望保留别人对我的外链啊，那么如何改进呢？
 
-首先删除`www.pchou.info`的A记录，添加CNAME记录
+首先删除`yufenghe.github.io`的A记录，添加CNAME记录
 
-> www.pchou.info -> pchou.github.io
+> yufenghe.github.io -> pchou.github.io
 
 使用dig查看域名解析情况
 
-	www.pchou.info.         1799    IN      CNAME   pchou.github.io.
+	yufenghe.github.io.         1799    IN      CNAME   pchou.github.io.
 	pchou.github.io.        3600    IN      CNAME   github.map.fastly.net.
 	github.map.fastly.net.  280     IN      A       103.245.222.133
 
@@ -136,12 +136,12 @@ $ git clone https://github.com/vinitkumar/white-paper.git
 
 修改或添加项目中的CNAME文件，变成如下：
 
-	www.pchou.info
+	yufenghe.github.io
 
 等待十几分钟即可。
 
-当访问`pchou.info`的时候会自动重定向到`www.pchou.info`，于是访问一台IP为`103.245.222.133`的镜像主机
-当访问`www.pchou.info`会访问一台IP为`103.245.222.133`的镜像主机
+当访问`yufenghe.github.io`的时候会自动重定向到`yufenghe.github.io`，于是访问一台IP为`103.245.222.133`的镜像主机
+当访问`yufenghe.github.io`会访问一台IP为`103.245.222.133`的镜像主机
 
 github在这里自动将`www`的子域与主域关联了起来，并有如下行为：
 
