@@ -106,7 +106,7 @@ Webmaster Tools需要认证你的站点，它会自动检测你的域名提供�
 
 ![]({{ site.BASE_PATH }}/assets/img/build-github-blog-page-06-img4.png)
 
-打开`Optimization`->`Sitemaps`，点击`Add/TEST SITEMAP`，输入指向你的站点的sitemap地址，本博客的sitemap是：<http://pchou.info/sitemap.txt>
+打开`Optimization`->`Sitemaps`，点击`Add/TEST SITEMAP`，输入指向你的站点的sitemap地址，本博客的sitemap是：<http://yufenghe.github.io/sitemap.txt>
 
 > `sitemap`是网站所有链接的集合，最简单的sitemap可以是一个文本文件，其中只存放你网站的所有可用资源的链接，这有利于搜索引擎收录你的网站内容。复杂的sitemap还可以利用sitemap的专用格式来标注资源的形式，更多关于sitemap可以参考：<http://www.sitemaps.org/>
 \

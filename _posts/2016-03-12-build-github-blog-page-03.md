@@ -60,21 +60,21 @@ TTL值全称是“生存时间（Time To Live)”，简单的说它表示DNS记�
 
 > 在写这篇文章的时候github是按照下面的方式配置自定义域名的，但是github已经改进了自定义域名的玩法，详见[一步步在GitHub上创建博客主页-最新版]()。你可以参考这个链接：[Setting up a custom domain with Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
 
-其实十分简单，假设我们购买了域名`pchou.info`，想用`pchou.info`访问你的站点`http://username.github.com/projectname`。
+其实十分简单，假设我们购买了域名`yufenghe.github.io`，想用`yufenghe.github.io`访问你的站点`http://username.github.com/projectname`。
 
 在你的域名提供商那边，设置一条A记录：
 
 	A
 
-	pchou.info  204.232.175.78
+	yufenghe.github.io  204.232.175.78
 
 注意：这个IP难保不会变，所以要及时关注上面这个链接中给出的IP，并及时更新A记录。下面这个截图是goddady上的A记录配置：
 
 ![]({{ site.BASE_PATH }}/assets/img/build-github-blog-page-03-img0.png)
 
-然后在你的`gh-pages`分支的根目录中创建一个`CNAME`文件，其中只能有一行，就是`pchou.info`，用Git客户端上传更改，大约等十几分钟就能生效了。
+然后在你的`gh-pages`分支的根目录中创建一个`CNAME`文件，其中只能有一行，就是`yufenghe.github.io`，用Git客户端上传更改，大约等十几分钟就能生效了。
 
-可以先`ping`一下pchou.info，如果返回的IP地址更配置的A记录一样的话，说明域名已经注册好了，就等GitHub生效了。不过别急，你还需要把`_config.yml`中的`baseurl`设置如下
+可以先`ping`一下yufenghe.github.io，如果返回的IP地址更配置的A记录一样的话，说明域名已经注册好了，就等GitHub生效了。不过别急，你还需要把`_config.yml`中的`baseurl`设置如下
 
 	baseurl : /
 

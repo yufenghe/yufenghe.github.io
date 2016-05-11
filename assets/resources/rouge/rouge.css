@@ -81,3 +81,17 @@ div[class="highlighter-rouge"] > pre[class="highlight"] > code{ background:black
 div[class="highlighter-rouge"] > pre[class="highlight"] { background:black; }
 .lineno {color: #f8f8f2 } /*Number of line*/
 pre[class='highlight'] {background-color:#000000;}
+pre {
+  position: relative;
+  /*background-color: #232323;*/
+  margin-bottom: 20px;
+  overflow-x: auto;
+  font-size: 13px;
+  color: #E6E1DC;
+  border: none;
+}
+pre code {
+  word-wrap: normal;
+  white-space: pre;
+  overflow-x: auto;
+}

@@ -1,7 +1,7 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 highlighter: rouge
 markdown: kramdown
-permalink: pretty
+#permalink: pretty
 
 kramdown:
   input: GFM
@@ -50,3 +50,4 @@ baiduTongji:
   id: 2159bae77d9d127b9e0caa04258dcfb2
 
 gems: [jekyll-paginate]
+#auto: true

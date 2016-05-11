@@ -75,7 +75,7 @@ tags: [nginx,storage,FileSystem]
 
 目前这个模块笔者命名为`mod_pieces`，已经开发完成并在windows和linux两个平台下测试通过，唯一不好的是无法支持HTTP Range，HTTP Range有点难弄，以后可能有时间再慢慢实现。代码还没有整理，有时间放到Github上去共享。
 
-`mod_pieces`的工作方式和原理和mod_zip很相似，有进一步需求的读者可以移步至：[利用Nginx第三方模块，实现附件打包下载](http://www.pchou.info/open-source/2014/07/28/nginx-mod-zip.html) 
+`mod_pieces`的工作方式和原理和mod_zip很相似，有进一步需求的读者可以移步至：[利用Nginx第三方模块，实现附件打包下载](http://yufenghe.github.io/open-source/2014/07/28/nginx-mod-zip.html) 
 
 
 ## 后续还是要合并的
