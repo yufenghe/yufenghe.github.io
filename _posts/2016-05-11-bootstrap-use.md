@@ -12,55 +12,53 @@ tags: [Bootstrap,jQuery]
 
 将页面json或者object数据格式化输出
 依赖：`jQuery`
-
+来源：`http://www.sharejs.com/codes/javascript/5452`，在此基础上进行修改
 ```javascript
 !function($) {
 	"use strict";
-	
+	//在HTML中使用<br>代替\r\n也可
 	$.formatJson = function(json, options) {
 		var reg = null,
         formatted = '',
         pad = 0,
-        PADDING = '    '; // one can also use '\t' or a different number of spaces
+        PADDING = '    '; // 也可以使用 '\t'代替
 
-      // optional settings
+      // 属性设置-初始化
       options = options || {};
-      // remove newline where '{' or '[' follows ':'
+      // 如果冒号“:”后面存在花括号“{”、中括号“[”，即":{"或":["这种，是否需要换行
       options.newlineAfterColonIfBeforeBraceOrBracket = (options.newlineAfterColonIfBeforeBraceOrBracket === true) ? true : false;
-      // use a space after a colon
+      // 判断冒号后是否添加空格
       options.spaceAfterColon = (options.spaceAfterColon === false) ? false : true;
       
-      // begin formatting...
-
-      // make sure we start with the JSON as a string
+      // 判断格式化json是否为string类型，否则转换
       if (typeof json !== 'string') {
         json = JSON.stringify(json);
       }
-      // parse and stringify in order to remove extra whitespace
+      
+      // 格式化解析去除多余的空格
       json = JSON.parse(json);
       json = JSON.stringify(json);
 
-      // add newline before and after curly braces
+      // 在花括号“{}”前后添加换行回车符
       reg = /([\{\}])/g;
       json = json.replace(reg, '\r\n$1\r\n');
 
-      // add newline before and after square brackets
+      // 在方括号“[]”前后添加换行回车符
       reg = /([\[\]])/g;
       json = json.replace(reg, '\r\n$1\r\n');
       
-      // add newline after comma
+      // 在逗号“,”后添加回车换行符
       reg = /(\,)/g;
       json = json.replace(reg, '$1\r\n');
       
-      // remove multiple newlines
+      // 去掉包含多个的回车换行
       reg = /(\r\n\r\n)/g;
       json = json.replace(reg, '\r\n');
       
-      // remove newlines before commas
+      // 去掉逗号“,”前面的回车换行
       reg = /\r\n\,/g;
       json = json.replace(reg, ',');
 
-      // optional formatting...
       if (!options.newlineAfterColonIfBeforeBraceOrBracket) {     
         reg = /\:\r\n\{/g;
         json = json.replace(reg, ':{');
@@ -71,6 +69,8 @@ tags: [Bootstrap,jQuery]
         reg = /\:/g;
         json = json.replace(reg, ': ');
       }
+      reg = /^(\r\n)?/;
+      json = json.replace(reg, "");
 
       $.each(json.split('\r\n'), function(index, node) {
         var i = 0,
