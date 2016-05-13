@@ -98,6 +98,44 @@ tags: [Bootstrap,jQuery]
       
       return formatted;
 	};
+    
+    /*h_uuid:db4111cc61594a98843454519a4c5aa9,h_status:0,md:66d07af974a04671ff85fc227bba2cb6,reserve:0,token:94ca56d805feb6af8204ffa427589ce4,size:14096,Content-Type:text/html;charset=UTF-8,Date:Fri, 13 May 2016 03:05:52 GMT*/
+    //目前尚未解决包含汉字的情况
+   $.vagueHighlight = function(content, split) {
+//		console.info(content)
+		if(!content) return;
+		if (typeof content !== 'string') {
+	        content = JSON.stringify(json);
+	    }
+		
+		var contentLen = content.length;
+		if(content.lastIndexOf(split) == contentLen-1) {
+			content = content.substring(0, contentLen-1);
+		}
+		
+		content = content.replace(/:(,)/g, ':AAAAA$1');
+		content = content.replace(/(\s*?{\s*?|\s*?,\s*?)?(['"])?([a-zA-Z_\-]+)(['"])?:/g, '$1"$3":');
+//		content = content.replace(/\s*/g, "");
+		content = content.replace(/,"/g, '&&');
+		content = content.replace(/:([\u0000-\u00FF]|[\u4E00-\uFA29]|[\uE7C7-\uE7F3])*(!)(&&)+/g, ':"$1$2"$3');
+		content = content.replace(/&&/g, ',"');
+		content = content.replace(/:([a-zA-z0-9\/;\-\=]+)(,")+/g, ':"$1"$2');
+		content = content.replace(/,"/g, '&&');
+		content = content.replace(/":/g, '##');
+		content = content.replace(/##([0-9a-zA-Z\s*,:]+)/g,'##"$1"');
+		content = content.replace(/##/g, '":');
+		content = content.replace(/&&/g, ',"');
+//		content = content.replace(/AAAAA/g, '');
+		var jsonObj = JSON.parse('{' + content + "}");
+		var arr = [];
+		$.each(jsonObj, function(key, value) {
+			arr.push('<span class="jf-PropertyName">' + key + '</span>:' + value);
+		});
+		
+		content = arr.join();
+		content = content.replace(/AAAAA/g, '');
+		return content;
+	};
 	
 	$.ajaxSubmit = function(url) {
 		$.ajax({
