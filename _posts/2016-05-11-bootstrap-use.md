@@ -13,6 +13,7 @@ tags: [Bootstrap,jQuery]
 将页面json或者object数据格式化输出
 依赖：`jQuery`
 来源：`http://www.sharejs.com/codes/javascript/5452`，在此基础上进行修改
+
 ```javascript
 !function($) {
 	"use strict";
@@ -246,5 +247,13 @@ tags: [Bootstrap,jQuery]
 ```
 效果图如下：
 ![2]({{ site.BASE_PATH }}/assets/img/20160511223021.png)
+
+## 文本输入提示
+
+可以使用`bootstrap-typeahead`控件
+
+## 下拉框输入选择
+
+可以使用select2插件
 
 Bootstrap没有使用太多，就是用了grid、form及各输入组件、可编辑表格，个人喜欢这种简约大方的风格，纯粹兴趣爱好，特此记下。
