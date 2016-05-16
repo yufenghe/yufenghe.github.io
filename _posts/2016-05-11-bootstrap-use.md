@@ -286,6 +286,92 @@ tags: [Bootstrap,jQuery]
 效果图如下：
 ![2]({{ site.BASE_PATH }}/assets/img/20160511223021.png)
 
+## 遮罩层
+
+css样式：
+
+```css
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+}
+/* Effects */
+.overlay-corner {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateY(0px) translateX(0px);
+	transform: translateY(0px) translateX(0px);
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, transform 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-corner.open {
+	filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+	-moz-opacity:0.5; 		  /*Firefox私有，透明度50%*/
+	opacity:0.5;			  /*其他，透明度50%*/
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Menu style */
+.overlay .loading {
+	text-align: center;
+	position: relative;
+	top: 50%;
+/* 	height: 20; */
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+```
+html代码片度：
+
+```html
+<html>
+<body>
+<div>
+	<button>点击</button>
+</div>
+<div class="overlay overlay-corner">
+	<div class="loading">
+		<img alt="加载中..." src="图片地址">
+	</div>
+</div>
+</body>
+</html>
+```
+弹出和隐藏代码：
+
+```javascript
+!function($) {
+	$.ajaxSubmit = function(url) {
+		//打开遮罩层
+		$('div.overlay').addClass('open');
+		$.ajax({
+	        url: url,
+	        type: 'post',
+	        data: $('#inputForm').serialize(),
+	        dataType: 'json',
+	        timeout: 30000,
+	        error: function (e) {
+				//关闭遮罩层
+	        	$('div.overlay').removeClass('open');
+	        },
+	        success: function (data) {
+				//关闭遮罩层
+	        	$('div.overlay').removeClass('open');
+	        }
+	    });
+	};
+}(window.jQuery);
+```
 ## 文本输入提示
 
 可以使用`bootstrap-typeahead`控件
