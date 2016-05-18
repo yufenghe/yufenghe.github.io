@@ -117,7 +117,7 @@ tags: [Bootstrap,jQuery]
 		content = content.replace(/(\s*?{\s*?|\s*?,\s*?)?(['"])?([a-zA-Z_\-]+)(['"])?:/g, '$1"$3":');
 //		content = content.replace(/\s*/g, "");
 		content = content.replace(/,"/g, '&&');
-		content = content.replace(/:([\u0000-\u00FF]|[\u4E00-\uFA29]|[\uE7C7-\uE7F3])*(!)(&&)+/g, ':"$1$2"$3');
+		content = content.replace(/:([\u4E00-\u9FA5\uF900-\uFA2D]*!?)(,")/g, ':"$1"$2')
 		content = content.replace(/&&/g, ',"');
 		content = content.replace(/:([a-zA-z0-9\/;\-\=]+)(,")+/g, ':"$1"$2');
 		content = content.replace(/,"/g, '&&');
@@ -372,6 +372,14 @@ html代码片度：
 	};
 }(window.jQuery);
 ```
+
+## 正则判断中文字符
+
+具体的匹配中文及字符方法：/[\u4E00-\u9FA5\uF900-\uFA2D]/
+说明：
+u4e00-u9fbf: unicode CJK(中日韩)统一表意字符，u9fa5后至u9fbf为空。
+uF900-uFAFF: 为unicode CJK 兼容象形文字，uFA2D后至uFAFF为空。
+具体可参考unicode编码表：http://www.nengcha.com/code/unicode/class/
 
 ## 文本输入提示
 
