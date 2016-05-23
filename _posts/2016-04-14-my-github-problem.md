@@ -8,7 +8,7 @@ tags: [github-page, jekyll, liquid]
 ---
 
 
-创建博客具体过程不再细表，可参见[一步步在GitHub上创建博客主页(1)]({% post_url  2016-03-10-build-github-blog-page-01 %})。
+创建博客具体过程不再细表，网上很多类似文章。
 
 因为博客使用jekyll模板引擎，需要安装Ruby，选择安装的Ruby版本为`ruby 2.2.4p230 (2015-12-16 revision 53155) [x64-mingw32]`，RubyDevKit版本按照Ruby的版本要求安装，gem版本为`2.4.5.1`，在这个过程中遇到过好多问题，要非常感谢`Stack Overflow`和`Ruby China`，总有一款答案适合自己。
 
