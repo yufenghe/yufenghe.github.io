@@ -74,5 +74,6 @@ xcopy D:\Java\jdk1.7.0_79\bin\javaws.exe C:\Windows\System32 /R /Y
 ```
 
 参考资料：
-[1] http://blog.csdn.net/cuidiwhere/article/details/12362829
-[2] http://www.oschina.net/code/snippet_145965_43181
+>[1] http://blog.csdn.net/cuidiwhere/article/details/12362829
+>
+>[2] http://www.oschina.net/code/snippet_145965_43181
