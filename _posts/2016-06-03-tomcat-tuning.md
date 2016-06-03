@@ -7,8 +7,9 @@ categories: [tomcat]
 tags: [java, tomcat]
 ---
 参考：
+
 - [`http://mp.weixin.qq.com/s?__biz=MzA3MzYwNjQ3NA==&mid=2651296654&idx=1&sn=b04fc6cecfcca64f9e48220af5e1e6c1&scene=4#wechat_redirect`](http://mp.weixin.qq.com/s?__biz=MzA3MzYwNjQ3NA==&mid=2651296654&idx=1&sn=b04fc6cecfcca64f9e48220af5e1e6c1&scene=4#wechat_redirect)
--  [`http://blog.163.com/drg_king/blog/static/1761515612012864140199/`](http://blog.163.com/drg_king/blog/static/1761515612012864140199/)
+- [`http://blog.163.com/drg_king/blog/static/1761515612012864140199/`](http://blog.163.com/drg_king/blog/static/1761515612012864140199/)
 
 以下参数配置都是针对windows平台的参数配置，linux环境下配置大体相同。此处tomcat配置环境为`apache-tomcat-7.0.47`
 
