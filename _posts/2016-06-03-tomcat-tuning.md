@@ -7,20 +7,20 @@ categories: [tomcat]
 tags: [java, tomcat]
 ---
 参考：
-![1][`http://mp.weixin.qq.com/s?__biz=MzA3MzYwNjQ3NA==&mid=2651296654&idx=1&sn=b04fc6cecfcca64f9e48220af5e1e6c1&scene=4#wechat_redirect`](http://mp.weixin.qq.com/s?__biz=MzA3MzYwNjQ3NA==&mid=2651296654&idx=1&sn=b04fc6cecfcca64f9e48220af5e1e6c1&scene=4#wechat_redirect)
-![2][`http://blog.163.com/drg_king/blog/static/1761515612012864140199/`](http://blog.163.com/drg_king/blog/static/1761515612012864140199/)
+![1][`http://mp.weixin.qq.com/s?__biz=MzA3MzYwNjQ3NA==&mid=2651296654&idx=1&sn=b04fc6cecfcca64f9e48220af5e1e6c1&scene=4#wechat_redirect`](http://mp.weixin.qq.com/s?__biz=MzA3MzYwNjQ3NA==&mid=2651296654&idx=1&sn=b04fc6cecfcca64f9e48220af5e1e6c1&scene=4#wechat_redirect)<br>
+![2][`http://blog.163.com/drg_king/blog/static/1761515612012864140199/`](http://blog.163.com/drg_king/blog/static/1761515612012864140199/)<br>
 以下参数配置都是针对windows平台的参数配置，linux环境下配置大体相同。此处tomcat配置环境为`apache-tomcat-7.0.47`
 
 ## jvm内存设置
 
 Tomcat内存优化主要是对启动参数优化，我们可以在tomcat的启动脚本`catalina.bat`中设置`JAVA_OPTS`参数。
 
-```shell
+```xml
 set JAVA_OPTS=-Djava.awt.headless=true -server -Xms1024m -Xmx1024m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=128m -XX:MaxPermSize=128m -XX:+DisableExplicitGC
 ```
 参数说明：
 
-```java
+```xml
 -server  				/*启用jdk 的 server 版*/
 -Xms      				/*java虚拟机初始化时的最小内存*/
 -Xmx      				/*java虚拟机可使用的最大内存*/
@@ -40,13 +40,13 @@ set JAVA_OPTS=-Djava.awt.headless=true -server -Xms1024m -Xmx1024m -XX:NewSize=2
 
 默认的tomcat 参数：
 
-```
+```xml
 <Connector port=“8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
 ```
 
 修改为：
 
-```
+```xml
 <Connector port=“8080" protocol="org.apache.coyote.http11.Http11NioProtocol"
   maxThreads="600"
   minSpareThreads="25"
@@ -80,7 +80,7 @@ compressableMimeType="text/html,text/xml"　          //压缩类型
 
 另：也可以使用连接池方式
 
-```
+```xml
 <Executor name="tomcatThreadPool" 
         namePrefix="tomcatThreadPool-" 
         maxThreads="1000" 
@@ -107,7 +107,7 @@ netstat -na | grep ESTAB | grep 8050 | wc -l
 
 在conf文件夹下的tomcat-users.xml文件中添加用户，比如
 
-```
+```xml
 <role rolename="tomcat"/>
 <role rolename="role1"/>
 <role rolename="manager"/>
