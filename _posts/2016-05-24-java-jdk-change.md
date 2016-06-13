@@ -20,6 +20,15 @@ Java(TM) SE Runtime Environment (build 1.7.0_79-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)
 ```
 
+在多版本同时存在的情况下，删除了C:\Windows\System32和C:\Windows\SysWOW64两个目录中的上述三个文件仍不能正常使用eclipse，可以使用以下这种方式：
+在eclipse.ini文件中添加
+
+```
+-vm
+D:\Java\jdk1.7.0_79_x86\bin\javaw.exe
+```
+
+
 网上找到一个脚本设置环境变量的方式：
 
 ```shell
